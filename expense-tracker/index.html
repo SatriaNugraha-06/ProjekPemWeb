@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Expense Tracker</title>
+  <!-- Menghubungkan ke file CSS eksternal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigasi Utama -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">DompetKu</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Dashboard</a></li>
+        <li><a href="tambah.html">+ Catat Transaksi</a></li>
+        <li><a href="riwayat.html">Riwayat Mutasi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Konten Utama Dashboard -->
+  <main class="main-container">
+    
+    <!-- Bagian Ringkasan Saldo (3 Kartu) -->
+    <section class="summary-section">
+      <h2 class="section-title">Ringkasan Bulan Ini</h2>
+      
+      <div class="summary-grid">
+        <!-- Kartu 1: Total Pemasukan -->
+        <div class="card card-income">
+          <span class="card-label">Total Pemasukan</span>
+          <p class="card-amount text-success">+Rp 3.500.000</p>
+        </div>
+
+        <!-- Kartu 2: Total Pengeluaran -->
+        <div class="card card-expense">
+          <span class="card-label">Total Pengeluaran</span>
+          <p class="card-amount text-danger">-Rp 1.200.000</p>
+        </div>
+
+        <!-- Kartu 3: Sisa Saldo -->
+        <div class="card card-balance">
+          <span class="card-label">Sisa Saldo</span>
+          <p class="card-amount text-primary">Rp 2.300.000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian Transaksi Terakhir -->
+    <section class="recent-transactions-section">
+      <div class="section-header">
+        <h2 class="section-title">5 Transaksi Terakhir</h2>
+        <a href="tambah.html" class="btn btn-primary">+ Tambah Transaksi Baru</a>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Kategori</th>
+              <th>Keterangan</th>
+              <th class="text-right">Nominal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>16/09/2026</td>
+              <td><span class="badge badge-food">Makanan</span></td>
+              <td>Makan siang</td>
+              <td class="text-right text-danger">-Rp 25.000</td>
+            </tr>
+            <tr>
+              <td>15/09/2026</td>
+              <td><span class="badge badge-transport">Transport</span></td>
+              <td>Bensin motor</td>
+              <td class="text-right text-danger">-Rp 30.000</td>
+            </tr>
+            <tr>
+              <td>14/09/2026</td>
+              <td><span class="badge badge-income">Pemasukan</span></td>
+              <td>Freelance desain UI</td>
+              <td class="text-right text-success">+Rp 500.000</td>
+            </tr>
+            <tr>
+              <td>13/09/2026</td>
+              <td><span class="badge badge-bill">Tagihan</span></td>
+              <td>Langganan internet</td>
+              <td class="text-right text-danger">-Rp 150.000</td>
+            </tr>
+            <tr>
+              <td>10/09/2026</td>
+              <td><span class="badge badge-income">Pemasukan</span></td>
+              <td>Gaji bulanan</td>
+              <td class="text-right text-success">+Rp 3.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-footer">
+        <a href="riwayat.html" class="link-more">Lihat Semua Transaksi &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catat Transaksi - DompetKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">DompetKu</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="tambah.html" class="active">+ Catat Transaksi</a></li>
+        <li><a href="riwayat.html">Riwayat Mutasi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Form Transaksi -->
+  <main class="main-container">
+    <div class="form-card">
+      <h2 class="section-title" style="text-align: center; margin-bottom: 24px;">Tambah Catatan Baru</h2>
+      
+      <form action="riwayat.html" method="GET">
+        <!-- Jenis Transaksi -->
+        <div class="form-group">
+          <label>Jenis Transaksi</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="jenis" value="pengeluaran" checked> Pengeluaran (-)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="jenis" value="pemasukan"> Pemasukan (+)
+            </label>
+          </div>
+        </div>
+
+        <!-- Tanggal -->
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" class="form-input" value="2026-09-17" required>
+        </div>
+
+        <!-- Kategori -->
+        <div class="form-group">
+          <label for="kategori">Kategori</label>
+          <select id="kategori" class="form-select" required>
+            <option value="">-- Pilih Kategori --</option>
+            <option value="makanan">Makanan & Minuman</option>
+            <option value="transport">Transportasi & Bensin</option>
+            <option value="belanja">Belanja Bulanan</option>
+            <option value="tagihan">Tagihan & Langganan</option>
+            <option value="gaji">Gaji / Honorarium</option>
+            <option value="lainnya">Lain-lain</option>
+          </select>
+        </div>
+
+        <!-- Nominal -->
+        <div class="form-group">
+          <label for="nominal">Nominal (Rp)</label>
+          <input type="number" id="nominal" class="form-input" placeholder="Contoh: 50000" min="0" required>
+        </div>
+
+        <!-- Catatan -->
+        <div class="form-group">
+          <label for="catatan">Catatan / Keterangan</label>
+          <input type="text" id="catatan" class="form-input" placeholder="Contoh: Makan siang bareng teman">
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary">Batal</a>
+          <button type="submit" class="btn btn-primary">Simpan Transaksi</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
