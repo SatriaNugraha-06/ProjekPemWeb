@@ -141,6 +141,7 @@ body {
   color: var(--text-muted);
 }
 
+
 .badge-favorite {
   position: absolute;
   top: 12px;
@@ -156,22 +157,23 @@ body {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
   color: #b0b0b0;
-  font-size: 32px;
+  font-size: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
-  opacity: 0.8;
+  opacity: 0.5;
+
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+/* Saat kursor diarahkan, opasitas kembali jelas */
 .badge-favorite:hover {
   opacity: 1;
   transform: scale(1.05);
 }
 
-/* Detail Page Layout */
 .detail-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
