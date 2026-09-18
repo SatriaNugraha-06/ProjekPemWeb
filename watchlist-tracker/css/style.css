@@ -93,13 +93,12 @@ body {
 }
 
 .media-card {
+  position: relative;
   background: var(--bg-card);
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
-  color: inherit;
   display: flex;
   flex-direction: column;
 }
@@ -124,6 +123,7 @@ body {
 .media-meta {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.85rem;
   color: var(--primary);
   font-weight: 700;
@@ -139,6 +139,35 @@ body {
 .media-genre {
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+/* Badge Favorit Melayang di Pojok Kanan Atas Gambar */
+.badge-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  color: #f43f5e;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.badge-favorite:hover {
+  transform: scale(1.15);
+  background: rgba(15, 23, 42, 0.9);
 }
 
 /* Detail Page Layout */
@@ -251,59 +280,4 @@ body {
 
 @media (max-width: 768px) {
   .detail-layout { grid-template-columns: 1fr; }
-} 
-
-/* Pastikan kartu menjadi patokan posisi tombol */
-.media-card {
-  position: relative;
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Tombol Favorit Melayang di Pojok Kanan Atas Gambar */
-.btn-fav {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(15, 23, 42, 0.65); /* efek kaca gelap */
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.btn-fav svg {
-  width: 18px;
-  height: 18px;
-  stroke: #ffffff;
-  fill: none;
-  transition: stroke 0.2s, fill 0.2s;
-}
-
-.btn-fav:hover {
-  transform: scale(1.1);
-  background: rgba(15, 23, 42, 0.85);
-}
-
-.btn-fav:hover svg {
-  stroke: #f43f5e;
-}
-
-/* Status jika anime disukai */
-.btn-fav.active svg {
-  fill: #f43f5e;
-  stroke: #f43f5e;
 }
