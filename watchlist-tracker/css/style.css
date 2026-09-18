@@ -141,14 +141,23 @@ body {
   color: var(--text-muted);
 }
 
+<<<<<<< HEAD
 .badge-favorite {
   position: absolute;
   top: 12px;
   left: 12px;                 
+=======
+/* Badge Favorit Melayang di Pojok Kanan Atas Gambar */
+.badge-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+>>>>>>> 8e6a8d94990522d9b48063bf9c4434ab3093edb1
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   width: 44px;                
   height: 44px;
   border-radius: 6px;          
@@ -169,6 +178,26 @@ body {
   transform: scale(1.05);
   background: rgba(0, 0, 0, 0.85);
   opacity: 0.8;                  
+=======
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  color: #f43f5e;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.badge-favorite:hover {
+  transform: scale(1.15);
+  background: rgba(15, 23, 42, 0.9);
+>>>>>>> 8e6a8d94990522d9b48063bf9c4434ab3093edb1
 }
 
 /* Detail Page Layout */
